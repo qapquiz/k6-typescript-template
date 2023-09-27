@@ -1,0 +1,19 @@
+{
+  "name": "@local/k6-runner",
+  "version": "0.0.1",
+  "scripts": {
+    "preperf": "rollup -c",
+    "perf": "k6 run ./dist/scenarios/$(ls ./dist/scenarios | fzf --height=40% --reverse)"
+  },
+  "keywords": [],
+  "author": "@armariya",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.4",
+    "@types/k6": "^0.46.3",
+    "fast-glob": "^3.3.1",
+    "rollup": "^3.29.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
