@@ -14,7 +14,7 @@ export default {
   external: [new RegExp(/^(k6|https?\:\/\/)(\/.*)?/)],
   plugins: [
     typescript({
-      tsconfig: false, // disable read config from tsconfig.toJSON();
+      tsconfig: false, // disable read config from tsconfig.json;
     }),
     nodeResolve(),
     commonjs(),
