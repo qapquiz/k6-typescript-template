@@ -2,6 +2,7 @@
   "name": "@local/k6-runner",
   "version": "0.0.1",
   "scripts": {
+    "format": "biome format --write ./src && biome check --apply-unsafe ./src",
     "roll": "rollup -c",
     "perf": "pnpm run roll && k6 run ./dist/scenarios/$(ls ./dist/scenarios | fzf --height=40% --reverse)"
   },
@@ -9,6 +10,7 @@
   "author": "@armariya",
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "^1.2.2",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-typescript": "^11.1.4",
