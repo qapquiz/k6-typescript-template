@@ -7,6 +7,7 @@ export default {
     format: "es",
     dir: "dist",
     preserveModules: true,
+    preserveModulesRoot: 'src',
   },
   external: ["k6"],
   plugins: [typescript()],

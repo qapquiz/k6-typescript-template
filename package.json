@@ -2,8 +2,8 @@
   "name": "@local/k6-runner",
   "version": "0.0.1",
   "scripts": {
-    "preperf": "rollup -c",
-    "perf": "k6 run ./dist/scenarios/$(ls ./dist/scenarios | fzf --height=40% --reverse)"
+    "roll": "rollup -c",
+    "perf": "pnpm run roll && k6 run ./dist/scenarios/$(ls ./dist/scenarios | fzf --height=40% --reverse)"
   },
   "keywords": [],
   "author": "@armariya",
