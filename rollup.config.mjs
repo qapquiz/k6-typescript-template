@@ -9,6 +9,6 @@ export default {
     preserveModules: true,
     preserveModulesRoot: 'src',
   },
-  external: ["k6"],
+  external: [new RegExp(/^(k6|https?\:\/\/)(\/.*)?/)],
   plugins: [typescript()],
 };
