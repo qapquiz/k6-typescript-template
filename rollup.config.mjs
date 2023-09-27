@@ -10,5 +10,7 @@ export default {
     preserveModulesRoot: 'src',
   },
   external: [new RegExp(/^(k6|https?\:\/\/)(\/.*)?/)],
-  plugins: [typescript()],
+  plugins: [typescript({
+    tsconfig: false, // disable read config from tsconfig.json
+  })],
 };
